@@ -1,5 +1,7 @@
 FROM dockerfile/java
 
+ENV CATALINA_HOME /tomcat
+
 RUN wget -q http://mirror.reverse.net/pub/apache/tomcat/tomcat-8/v8.0.14/bin/apache-tomcat-8.0.14.tar.gz && \
     tar zxf apache-tomcat-*.tar.gz && \
     rm -f apache-tomcat-*.tar.gz && \
