@@ -1,0 +1,23 @@
+{
+  "id": "frontendController",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "replicas": 3,
+    "replicaSelector": {"name": "frontend"},
+    "podTemplate": {
+      "desiredState": {
+         "manifest": {
+           "version": "v1beta1",
+           "id": "frontendController",
+           "containers": [{
+             "name": "tomcat-retail",
+             "image": "viniciusccarvalho/kubernetes-retail",
+             "ports": [{"containerPort": 8080, "hostPort": 8080}]
+           }]
+         }
+       },
+       "labels": {"name": "frontend"}
+      }},
+  "labels": {"name": "frontend"}
+}

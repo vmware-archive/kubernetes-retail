@@ -1,5 +1,5 @@
 {
-  "id": "rabbit-proxy",
+  "id": "rabbit",
   "kind": "Service",
   "apiVersion": "v1beta1",
   "port": 10000,
